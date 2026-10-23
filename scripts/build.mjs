@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const output=path.resolve(root,'dist');assert(output.startsWith(root+path.sep)&&path.basename(output)==='dist');
+await fs.rm(output,{recursive:true,force:true});
+await fs.mkdir(output,{recursive:true});
+await fs.cp(path.join(root,'public'),output,{recursive:true});
+console.log('Built static portfolio in dist/');

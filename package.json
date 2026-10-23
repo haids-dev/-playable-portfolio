@@ -1,0 +1,19 @@
+{
+  "name": "playable-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "inventory": "node scripts/import-builds.mjs --scan",
+    "import": "node scripts/import-builds.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --test scripts/*.test.mjs && node scripts/check.mjs",
+    "preview:cloudflare": "node scripts/cloudflare.mjs dev",
+    "deploy": "npm run build && node scripts/cloudflare.mjs deploy"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "wrangler": "^4.152.0"
+  }
+}

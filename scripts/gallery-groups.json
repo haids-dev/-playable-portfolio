@@ -1,0 +1,10 @@
+{
+  "groups": [
+    {
+      "gameKey": "Cooking",
+      "variant": "Female Santa",
+      "variants": ["V2 Female Santa", "V3 Female Santa"],
+      "reason": "The owner identified this as one creative with multiple store targets. Keep its newest revision."
+    }
+  ]
+}
