@@ -1,6 +1,41 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f5f7"><meta name="description" content="Browse and play a collection of playable ad games and creative variations."><title>Playables — Game collection</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
-<body><header class="header"><a class="brand" href="./"><svg viewBox="0 0 32 24" aria-hidden="true"><path d="M9 3h14c4 0 7 12 6 16-1 4-5 3-9-2h-8c-4 5-8 6-9 2C2 15 5 3 9 3Z"/><path d="M10 7v7M6.5 10.5h7M21 8h.1M25 12h.1"/></svg>Playables</a><span id="total" class="total">Game collection</span></header>
-<main><div class="page-title"><div><h1>Pick a game. <span>Have a play.</span></h1><p>Playable ads and their creative variations.</p></div></div>
-<div class="toolbar"><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg><span class="sr-only">Search games</span><input id="search" type="search" placeholder="Search games…" autocomplete="off"></label><label class="collection-select"><span class="sr-only">Collection</span><select id="collection"><option value="">All collections</option></select></label><span id="result-count" class="result-count" aria-live="polite"></span></div>
-<div class="grid" id="games" aria-busy="true"><p class="empty">Loading games…</p></div></main><footer class="footer">Choose a playable to start. No download needed.</footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Browse and play a collection of playable ad games and creative variations.">
+  <title>Playables — Game collection</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./">
+      <span class="brand-mark"><svg viewBox="0 0 32 24" aria-hidden="true"><path d="M9 3h14c4 0 7 12 6 16-1 4-5 3-9-2h-8c-4 5-8 6-9 2C2 15 5 3 9 3Z"/><path d="M10 7v7M6.5 10.5h7M21 8h.1M25 12h.1"/></svg></span>
+      <span class="brand-text"><strong>Playables</strong><span>Playable ad collection</span></span>
+    </a>
+    <span id="total" class="total">Game collection</span>
+  </header>
+  <main>
+    <div class="page-title">
+      <span class="eyebrow">THE COLLECTION</span>
+      <h1>Pick a game. <span>Have a play.</span></h1>
+      <p>Playable ads and their creative variations.</p>
+    </div>
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg>
+        <span class="sr-only">Search games</span>
+        <input id="search" type="search" placeholder="Search games…" autocomplete="off">
+      </label>
+      <label class="collection-select"><span class="sr-only">Collection</span><select id="collection"><option value="">All collections</option></select></label>
+      <span id="result-count" class="result-count" aria-live="polite"></span>
+    </div>
+    <div class="grid" id="games" aria-busy="true"><p class="empty">Loading games…</p></div>
+  </main>
+  <footer class="footer">Choose a playable to start. No download needed.</footer>
+</body>
+</html>

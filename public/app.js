@@ -1,5 +1,4 @@
 const grid=document.querySelector('#games'),search=document.querySelector('#search'),collection=document.querySelector('#collection');
-const colors={Puzzle:'#dcc7e4',Platformer:'#c6dbb1',Racing:'#c3d5e3',Driving:'#d9c9b8',Action:'#c6c8e2',Simulation:'#e8d1b6',Sports:'#bcd9ce','Mini games':'#e8d8b5',Interactive:'#c8d8e7'};
 const featured=['Bino','PixelPaint','TaxiSimu','Wheelie2','FruitSalon','BlockCrusher','MiniGame','Cooking','Rush','NextBots','Mini4_WorldCup','CAR_PARKING','LiveScore','CarRace_PA_Neon_V3'];
 let items=[];
 function render(){
@@ -8,7 +7,7 @@ function render(){
  grid.replaceChildren();
  for(const item of matches){
   const card=document.createElement('a');card.className='game-card';card.href='play.html?id='+encodeURIComponent(item.id);card.setAttribute('aria-label','Play '+item.game+' — '+item.variant);
-  const picture=document.createElement('div');picture.className='thumbnail';picture.style.setProperty('--color',colors[item.genre]||'#d5dfeb');
+  const picture=document.createElement('div');picture.className='thumbnail';
   const placeholder=document.createElement('span');placeholder.className='placeholder';placeholder.setAttribute('aria-hidden','true');placeholder.textContent=item.game.split(' ').map(w=>w[0]).slice(0,2).join('');picture.append(placeholder);
   const img=document.createElement('img');img.src=item.thumbnail;img.alt=item.game+' — '+item.variant;img.loading='lazy';img.decoding='async';img.addEventListener('error',()=>img.hidden=true,{once:true});picture.append(img);
   const play=document.createElement('span');play.className='play-icon';play.textContent='▶';play.setAttribute('aria-hidden','true');picture.append(play);
